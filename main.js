@@ -164,6 +164,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sections.forEach(section => sectionObserver.observe(section));
 
+  // ========== MINI SLIDER DE CARDS ==========
+  function initCardSliders() {
+    const sliders = document.querySelectorAll('.card-slider');
+    sliders.forEach((slider, sliderIndex) => {
+      const slides = slider.querySelectorAll('.card-slide');
+      if (slides.length < 2) return;
+      let current = 0;
+
+      // Configurar posición inicial: cada slider empieza en una imagen diferente
+      slides.forEach((s, i) => s.classList.remove('active'));
+      slides[0].classList.add('active');
+
+      // Rotar con un offset de 1s entre cada card para que no sean simultáneas
+      setTimeout(() => {
+        setInterval(() => {
+          slides[current].classList.remove('active');
+          current = (current + 1) % slides.length;
+          slides[current].classList.add('active');
+        }, 3000);
+      }, sliderIndex * 1000);
+    });
+  }
+  initCardSliders();
+
 }); // end DOMContentLoaded
 
 
