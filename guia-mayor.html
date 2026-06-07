@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guía Mayor — FEJAB</title>
+  <meta name="description" content="Conviértete en Guía Mayor - Programa de liderazgo juvenil adventista en Boyacá Norte" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Red+Hat+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+  <style>
+    .requisitos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin: 40px 0;
+    }
+    .req-card {
+      background: white;
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 2px 16px rgba(26,26,110,0.08);
+      border-left: 4px solid #1A1A6E;
+      transition: all 0.3s;
+    }
+    .req-card:hover { transform: translateY(-4px); border-left-color: #6B21A8; }
+    .req-number {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 2.5rem;
+      color: rgba(26,26,110,0.15);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .req-title { font-family: 'Bebas Neue', cursive; font-size: 1.1rem; color: #1A1A6E; margin-bottom: 8px; }
+    .req-desc { color: #6B7280; font-size: 0.875rem; line-height: 1.6; }
+    .inscription-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 20px;
+      padding: 48px;
+      box-shadow: 0 8px 40px rgba(26,26,110,0.12);
+    }
+    .form-input-light {
+      width: 100%;
+      background: #F9FAFB;
+      border: 1.5px solid #E5E7EB;
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-family: 'Red Hat Display', sans-serif;
+      font-size: 0.95rem;
+      color: #374151;
+      outline: none;
+      transition: all 0.3s;
+    }
+    .form-input-light:focus { border-color: #1A1A6E; box-shadow: 0 0 0 3px rgba(26,26,110,0.08); }
+    .form-label-light { display: block; color: #374151; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo feja horizontal blanco.png" alt="FEJAB Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="logo-fallback" style="display:none;">
+          <span class="logo-text">Jóvenes Adventistas <strong>FEJAB</strong></span>
+        </div>
+      </a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="recursos.html" class="nav-link">Recursos</a></li>
+        <li><a href="clubes.html" class="nav-link">Clubes</a></li>
+        <li><a href="login.html" class="nav-link nav-btn-login">Iniciar Sesión</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <div class="page-hero" style="padding-bottom:100px;">
+    <div class="page-hero-content container">
+      <div style="display:inline-flex; align-items:center; gap:8px; background:rgba(234,179,8,0.15); border:1px solid rgba(234,179,8,0.3); padding:6px 16px; border-radius:100px; margin-bottom:20px;">
+        <i class="fa fa-shield-halved" style="color:#EAB308;"></i>
+        <span style="color:#EAB308; font-size:0.8rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;">Programa Oficial</span>
+      </div>
+      <h1 class="page-hero-title">Conviértete en<br/>un Guía Mayor</h1>
+      <p class="page-hero-subtitle">
+        Ser un Guía Mayor es aceptar el llamado a ser faro y guía en este mundo lleno de oscuridad
+      </p>
+      <div style="margin-top:24px;">
+        <a href="#inscripcion" class="btn btn-primary btn-lg">Me apunto <i class="fa fa-arrow-right"></i></a>
+        <a href="#requisitos" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.4); color:white; margin-left:12px;">Ver requisitos</a>
+      </div>
+      <div class="breadcrumb" style="margin-top:24px;">
+        <a href="index.html">Inicio</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Guía Mayor</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ¿Qué es? -->
+  <section style="padding:80px 0; background:white;">
+    <div class="container">
+      <div class="guia-grid">
+        <div class="animate-from-left">
+          <span class="section-label">¿Qué es el Guía Mayor?</span>
+          <h2 class="section-title">El Llamado más <span class="text-accent">Alto</span></h2>
+          <p class="section-text">
+            El programa Guía Mayor es el nivel más alto del movimiento juvenil adventista. Es un llamado a convertirse en mentor, líder espiritual y ejemplo vivo del amor de Cristo para la generación joven.
+          </p>
+          <p class="section-text">
+            Es ser un mentor, un amigo, un modelo a seguir, y sobre todo, un testigo vivo del amor y la gracia de Dios.
+          </p>
+          <div class="guia-features">
+            <div class="feature-item"><i class="fa fa-star feature-icon"></i> <span>Liderazgo espiritual y servicio</span></div>
+            <div class="feature-item"><i class="fa fa-graduation-cap feature-icon"></i> <span>Formación y capacitación continua</span></div>
+            <div class="feature-item"><i class="fa fa-hands-helping feature-icon"></i> <span>Mentoría y acompañamiento</span></div>
+            <div class="feature-item"><i class="fa fa-certificate feature-icon"></i> <span>Reconocimiento oficial de la iglesia</span></div>
+          </div>
+        </div>
+        <div class="animate-fade-scale">
+          <div class="guia-img-container">
+            <img src="banner.jpg.jpeg" alt="Guía Mayor" class="guia-img" />
+            <div class="guia-badge"><i class="fa fa-shield-halved"></i> Guía Mayor FEJAB</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Requisitos -->
+  <section style="padding:80px 0; background:#F3F4F6;" id="requisitos">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:8px;">
+        <span class="section-label">Lo que necesitas</span>
+      </div>
+      <h2 class="section-title" style="text-align:center; margin-bottom:48px;">Requisitos del Programa</h2>
+      <div class="requisitos-grid">
+        <div class="req-card animate-fade-up">
+          <div class="req-number">01</div>
+          <div class="req-title">Fe activa en Cristo</div>
+          <p class="req-desc">Ser bautizado miembro de la Iglesia Adventista del Séptimo Día con vida espiritual activa.</p>
+        </div>
+        <div class="req-card animate-fade-up" style="animation-delay:0.1s">
+          <div class="req-number">02</div>
+          <div class="req-title">Edad mínima</div>
+          <p class="req-desc">Tener 16 años o más al momento de iniciar el proceso de investidura.</p>
+        </div>
+        <div class="req-card animate-fade-up" style="animation-delay:0.2s">
+          <div class="req-number">03</div>
+          <div class="req-title">Club activo</div>
+          <p class="req-desc">Ser miembro activo de un club de jóvenes adventistas afiliado a FEJAB.</p>
+        </div>
+        <div class="req-card animate-fade-up" style="animation-delay:0.3s">
+          <div class="req-number">04</div>
+          <div class="req-title">Especialidades</div>
+          <p class="req-desc">Completar el número de especialidades requeridas según el manual oficial.</p>
+        </div>
+        <div class="req-card animate-fade-up" style="animation-delay:0.4s">
+          <div class="req-number">05</div>
+          <div class="req-title">Proyecto comunitario</div>
+          <p class="req-desc">Desarrollar y ejecutar un proyecto de servicio comunitario de impacto.</p>
+        </div>
+        <div class="req-card animate-fade-up" style="animation-delay:0.5s">
+          <div class="req-number">06</div>
+          <div class="req-title">Recomendación pastoral</div>
+          <p class="req-desc">Carta de recomendación del pastor o director de jóvenes de tu iglesia local.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulario de inscripción -->
+  <section style="padding:80px 0; background:white;" id="inscripcion">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:40px;">
+        <span class="section-label">¡Anímate!</span>
+        <h2 class="section-title">Formulario de Inscripción</h2>
+        <p style="color:#6B7280; max-width:500px; margin:0 auto;">Completa el formulario y nos pondremos en contacto contigo para guiarte en el proceso.</p>
+      </div>
+      <div class="inscription-form">
+        <form id="guiaForm">
+          <div style="margin-bottom:20px;">
+            <label class="form-label-light" for="guiaNombre">Nombre completo *</label>
+            <input type="text" id="guiaNombre" class="form-input-light" placeholder="Tu nombre completo" required />
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:20px;">
+            <div>
+              <label class="form-label-light" for="guiaEmail">Correo electrónico *</label>
+              <input type="email" id="guiaEmail" class="form-input-light" placeholder="tu@correo.com" required />
+            </div>
+            <div>
+              <label class="form-label-light" for="guiaPhone">Teléfono *</label>
+              <input type="tel" id="guiaPhone" class="form-input-light" placeholder="+57 XXX XXX XXXX" required />
+            </div>
+          </div>
+          <div style="margin-bottom:20px;">
+            <label class="form-label-light" for="guiaClub">Club al que perteneces *</label>
+            <input type="text" id="guiaClub" class="form-input-light" placeholder="Nombre de tu club adventista" required />
+          </div>
+          <div style="margin-bottom:20px;">
+            <label class="form-label-light" for="guiaEdad">Edad *</label>
+            <input type="number" id="guiaEdad" class="form-input-light" placeholder="Tu edad" min="16" required />
+          </div>
+          <div style="margin-bottom:28px;">
+            <label class="form-label-light" for="guiaMensaje">¿Por qué quieres ser Guía Mayor?</label>
+            <textarea id="guiaMensaje" class="form-input-light" rows="4" placeholder="Cuéntanos tu motivación..." style="resize:vertical;"></textarea>
+          </div>
+          <div id="guiaAlert" class="alert"></div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;" id="guiaSubmitBtn">
+            <i class="fa fa-paper-plane"></i> Enviar inscripción
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer simple -->
+  <footer style="background:#0F0F2E; padding:32px 0; text-align:center;">
+    <p style="color:rgba(255,255,255,0.4); font-size:0.85rem;">© 2025 FEJAB — Todos los derechos reservados</p>
+    <a href="index.html" style="color:#EAB308; font-size:0.875rem; margin-top:8px; display:inline-block;">← Volver al inicio</a>
+  </footer>
+
+  <button class="back-to-top" id="backToTop"><i class="fa fa-chevron-up"></i></button>
+  <script src="main.js"></script>
+  <script>
+    document.getElementById('guiaForm')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('guiaSubmitBtn');
+      const alertEl = document.getElementById('guiaAlert');
+      btn.disabled = true;
+      btn.textContent = 'Enviando...';
+      await new Promise(r => setTimeout(r, 1500));
+      alertEl.className = 'alert alert-success show';
+      alertEl.innerHTML = '<i class="fa fa-check-circle"></i> ¡Inscripción enviada! Nos pondremos en contacto pronto.';
+      btn.disabled = false;
+      btn.innerHTML = '<i class="fa fa-paper-plane"></i> Enviar inscripción';
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — FEJAB</title>
+  <meta name="description" content="Panel de usuario - FEJAB Jóvenes Adventistas Boyacá Norte" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Red+Hat+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+  <style>
+    /* Estilos extra para dashboard */
+    body { background: #F3F4F6; font-family: 'Red Hat Display', sans-serif; }
+    .activity-list { display: flex; flex-direction: column; gap: 12px; }
+    .activity-item {
+      display: flex; align-items: center; gap: 16px;
+      background: white; border-radius: 10px; padding: 16px 20px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+    }
+    .activity-icon {
+      width: 40px; height: 40px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem; flex-shrink: 0;
+    }
+    .activity-text { flex: 1; }
+    .activity-title { font-weight: 600; color: #1A1A6E; font-size: 0.9rem; }
+    .activity-time { font-size: 0.78rem; color: #9CA3AF; margin-top: 2px; }
+    .quick-actions { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 28px; }
+    .quick-action {
+      background: white; border-radius: 12px; padding: 20px;
+      text-align: center; cursor: pointer; transition: all 0.3s;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-decoration: none;
+      display: block;
+    }
+    .quick-action:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(26,26,110,0.15); }
+    .quick-action-icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .quick-action-label { font-size: 0.875rem; font-weight: 600; color: #374151; }
+    .section-card { background: white; border-radius: 12px; padding: 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin-bottom: 24px; }
+    .section-card-title {
+      font-family: 'Bebas Neue', cursive; font-size: 1.3rem; color: #1A1A6E;
+      letter-spacing: 0.02em; margin-bottom: 20px; border-bottom: 2px solid #F3F4F6; padding-bottom: 12px;
+    }
+  </style>
+</head>
+<body class="dashboard-page">
+
+  <!-- Navbar con logout -->
+  <nav class="navbar" id="navbar" style="position:fixed; top:0; left:0; right:0; z-index:200;">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo feja horizontal blanco.png" alt="FEJAB Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="logo-fallback" style="display:none;">
+          <span class="logo-text">FEJAB</span>
+        </div>
+      </a>
+      <div style="display:flex; align-items:center; gap:16px;">
+        <span style="color:rgba(255,255,255,0.7); font-size:0.875rem;">
+          Hola, <strong data-user-name style="color:#EAB308;">Usuario</strong>
+        </span>
+        <button class="btn btn-outline btn-sm logout-btn" style="color:white; border-color:rgba(255,255,255,0.3);">
+          <i class="fa fa-sign-out-alt"></i> Salir
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <aside class="dashboard-sidebar">
+    <nav class="sidebar-nav">
+      <a href="dashboard.html" class="sidebar-link active">
+        <i class="fa fa-home"></i> Dashboard
+      </a>
+      <a href="recursos.html" class="sidebar-link">
+        <i class="fa fa-book"></i> Recursos
+      </a>
+      <a href="aprende.html" class="sidebar-link">
+        <i class="fa fa-graduation-cap"></i> Aprende
+      </a>
+      <a href="clubes.html" class="sidebar-link">
+        <i class="fa fa-users"></i> Nuestros Clubes
+      </a>
+      <a href="guia-mayor.html" class="sidebar-link">
+        <i class="fa fa-shield-halved"></i> Guía Mayor
+      </a>
+      <a href="plan-fejab.html" class="sidebar-link">
+        <i class="fa fa-map"></i> Plan FEJAB
+      </a>
+      <div style="height:1px; background:rgba(255,255,255,0.1); margin:16px 0;"></div>
+      <a href="index.html" class="sidebar-link">
+        <i class="fa fa-globe"></i> Ver sitio
+      </a>
+      <button class="sidebar-link logout-btn" style="text-align:left; width:100%;">
+        <i class="fa fa-sign-out-alt"></i> Cerrar sesión
+      </button>
+    </nav>
+  </aside>
+
+  <!-- Contenido principal -->
+  <main class="dashboard-main">
+
+    <!-- Bienvenida -->
+    <div class="dashboard-welcome">
+      <h1 style="font-family:'Bebas Neue',cursive; font-size:1.8rem; margin-bottom:6px; letter-spacing:0.02em;">
+        ¡Bienvenido, <span data-user-name>Usuario</span>! 👋
+      </h1>
+      <p style="color:rgba(255,255,255,0.7); font-size:0.9rem; margin-bottom:4px;">
+        <i class="fa fa-envelope" style="color:#EAB308; margin-right:6px;"></i>
+        <span data-user-email>usuario@fejab.org</span>
+      </p>
+      <p style="color:rgba(255,255,255,0.6); font-size:0.85rem;">
+        <i class="fa fa-users" style="color:#EAB308; margin-right:6px;"></i>
+        Club: <span data-user-club>Sin club</span> &nbsp;·&nbsp;
+        <i class="fa fa-tag" style="color:#EAB308; margin-right:6px;"></i>
+        Rol: <span data-user-role>miembro</span>
+      </p>
+    </div>
+
+    <!-- Estadísticas -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon blue"><i class="fa fa-book-open"></i></div>
+        <div>
+          <div class="stat-number">12</div>
+          <div class="stat-label">Recursos disponibles</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon purple"><i class="fa fa-users"></i></div>
+        <div>
+          <div class="stat-number">400+</div>
+          <div class="stat-label">Jóvenes en Boyacá</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon yellow"><i class="fa fa-calendar"></i></div>
+        <div>
+          <div class="stat-number">3</div>
+          <div class="stat-label">Eventos próximos</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon green"><i class="fa fa-shield-halved"></i></div>
+        <div>
+          <div class="stat-number">15+</div>
+          <div class="stat-label">Clubes activos</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Acciones rápidas -->
+    <h2 style="font-family:'Bebas Neue',cursive; font-size:1.4rem; color:#1A1A6E; margin-bottom:16px; letter-spacing:0.02em;">
+      Acciones Rápidas
+    </h2>
+    <div class="quick-actions">
+      <a href="recursos.html" class="quick-action">
+        <div class="quick-action-icon" style="color:#1A1A6E;">📚</div>
+        <div class="quick-action-label">Ver Recursos</div>
+      </a>
+      <a href="guia-mayor.html" class="quick-action">
+        <div class="quick-action-icon" style="color:#6B21A8;">🛡️</div>
+        <div class="quick-action-label">Guía Mayor</div>
+      </a>
+      <a href="clubes.html" class="quick-action">
+        <div class="quick-action-icon" style="color:#1E3A8A;">👥</div>
+        <div class="quick-action-label">Mis Clubes</div>
+      </a>
+      <a href="aprende.html" class="quick-action">
+        <div class="quick-action-icon" style="color:#EAB308;">🎓</div>
+        <div class="quick-action-label">Aprende</div>
+      </a>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+      <!-- Actividad reciente -->
+      <div class="section-card">
+        <div class="section-card-title">Actividad Reciente</div>
+        <div class="activity-list">
+          <div class="activity-item">
+            <div class="activity-icon" style="background:rgba(26,26,110,0.1); color:#1A1A6E;"><i class="fa fa-book"></i></div>
+            <div class="activity-text">
+              <div class="activity-title">Descargaste "Manual Guía Mayor 2025"</div>
+              <div class="activity-time">Hace 2 horas</div>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-icon" style="background:rgba(107,33,168,0.1); color:#6B21A8;"><i class="fa fa-user-plus"></i></div>
+            <div class="activity-text">
+              <div class="activity-title">Te uniste a la comunidad FEJAB</div>
+              <div class="activity-time">Hoy</div>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-icon" style="background:rgba(234,179,8,0.15); color:#B45309;"><i class="fa fa-star"></i></div>
+            <div class="activity-text">
+              <div class="activity-title">Completaste tu perfil</div>
+              <div class="activity-time">Hoy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Próximos eventos -->
+      <div class="section-card">
+        <div class="section-card-title">Próximos Eventos</div>
+        <div class="activity-list">
+          <div class="activity-item">
+            <div class="activity-icon" style="background:rgba(30,58,138,0.1); color:#1E3A8A;"><i class="fa fa-calendar-check"></i></div>
+            <div class="activity-text">
+              <div class="activity-title">Campamento Regional Boyacá Norte</div>
+              <div class="activity-time">15 Julio 2025</div>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-icon" style="background:rgba(107,33,168,0.1); color:#6B21A8;"><i class="fa fa-award"></i></div>
+            <div class="activity-text">
+              <div class="activity-title">Ceremonia Guía Mayor — Zona Norte</div>
+              <div class="activity-time">3 Agosto 2025</div>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-icon" style="background:rgba(34,197,94,0.1); color:#16A34A;"><i class="fa fa-music"></i></div>
+            <div class="activity-text">
+              <div class="activity-title">Festival Juvenil FEJAB 2025</div>
+              <div class="activity-time">20 Septiembre 2025</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Versículo del día -->
+    <div class="section-card" style="background:linear-gradient(135deg,#1A1A6E,#312E81); color:white;">
+      <div style="display:flex; gap:20px; align-items:center;">
+        <div style="font-size:2.5rem;">✝️</div>
+        <div>
+          <div style="font-family:'Bebas Neue',cursive; font-size:1rem; letter-spacing:0.08em; color:#EAB308; margin-bottom:8px;">VERSÍCULO DEL DÍA</div>
+          <p style="font-size:1rem; line-height:1.65; font-style:italic; color:rgba(255,255,255,0.9);">
+            "Porque yo sé los planes que tengo para ustedes, planes de bienestar y no de calamidad, a fin de darles un futuro y una esperanza."
+          </p>
+          <p style="color:rgba(234,179,8,0.8); font-size:0.875rem; margin-top:8px; font-weight:600;">— Jeremías 29:11</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

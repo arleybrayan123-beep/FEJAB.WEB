@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recursos y Materiales — FEJAB</title>
+  <meta name="description" content="Recursos y materiales para jóvenes adventistas de Boyacá Norte - FEJAB" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Red+Hat+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo feja horizontal blanco.png" alt="FEJAB Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="logo-fallback" style="display:none;">
+          <span class="logo-text">Jóvenes Adventistas <strong>FEJAB</strong></span>
+        </div>
+      </a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="recursos.html" class="nav-link" style="color:#EAB308">Recursos</a></li>
+        <li><a href="clubes.html" class="nav-link">Clubes</a></li>
+        <li><a href="login.html" class="nav-link nav-btn-login">Iniciar Sesión</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="page-hero-content container">
+      <h1 class="page-hero-title">Recursos y Materiales</h1>
+      <p class="page-hero-subtitle">Todo lo que necesitas para tu crecimiento espiritual y ministerial</p>
+      <div class="breadcrumb">
+        <a href="index.html">Inicio</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Recursos</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenido -->
+  <section class="section-content">
+    <div class="container">
+
+      <!-- Filtros -->
+      <div style="display:flex; gap:12px; margin-bottom:40px; flex-wrap:wrap;">
+        <button class="btn btn-primary btn-sm" onclick="filterResources('all')" id="filter-all">Todos</button>
+        <button class="btn btn-outline btn-sm" onclick="filterResources('guia')" id="filter-guia">Guía Mayor</button>
+        <button class="btn btn-outline btn-sm" onclick="filterResources('estudio')" id="filter-estudio">Estudios</button>
+        <button class="btn btn-outline btn-sm" onclick="filterResources('evento')" id="filter-evento">Eventos</button>
+        <button class="btn btn-outline btn-sm" onclick="filterResources('devocional')" id="filter-devocional">Devocionales</button>
+      </div>
+
+      <div class="recursos-grid" id="recursosGrid">
+
+        <div class="recurso-card" data-category="guia">
+          <div class="recurso-icon"><i class="fa fa-shield-halved"></i></div>
+          <div class="recurso-title">Manual Guía Mayor 2025</div>
+          <p class="recurso-desc">Guía completa para el programa de Guía Mayor. Incluye requisitos, ceremonias y más.</p>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span class="recurso-tag">Guía Mayor</span>
+            <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-download"></i> PDF</a>
+          </div>
+        </div>
+
+        <div class="recurso-card" data-category="estudio">
+          <div class="recurso-icon" style="background:linear-gradient(135deg,#6B21A8,#A855F7)"><i class="fa fa-bible"></i></div>
+          <div class="recurso-title">Estudio Bíblico Semanal</div>
+          <p class="recurso-desc">Material de estudio bíblico para grupos de jóvenes. Temas actuales y relevantes.</p>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span class="recurso-tag" style="background:rgba(107,33,168,0.1); color:#6B21A8;">Estudio</span>
+            <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-download"></i> PDF</a>
+          </div>
+        </div>
+
+        <div class="recurso-card" data-category="evento">
+          <div class="recurso-icon" style="background:linear-gradient(135deg,#1E3A8A,#2563EB)"><i class="fa fa-calendar-star"></i></div>
+          <div class="recurso-title">Programa Campamento 2025</div>
+          <p class="recurso-desc">Planificación completa del campamento regional. Actividades, horarios y logística.</p>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span class="recurso-tag" style="background:rgba(30,58,138,0.1); color:#1E3A8A;">Evento</span>
+            <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-download"></i> PDF</a>
+          </div>
+        </div>
+
+        <div class="recurso-card" data-category="devocional">
+          <div class="recurso-icon" style="background:linear-gradient(135deg,#EAB308,#F59E0B)"><i class="fa fa-sun" style="color:#1A1A6E"></i></div>
+          <div class="recurso-title">Devocional Matutino Joven</div>
+          <p class="recurso-desc">Colección de meditaciones matutinas diseñadas para jóvenes adventistas.</p>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span class="recurso-tag" style="background:rgba(234,179,8,0.15); color:#92400E;">Devocional</span>
+            <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-download"></i> PDF</a>
+          </div>
+        </div>
+
+        <div class="recurso-card" data-category="guia">
+          <div class="recurso-icon"><i class="fa fa-award"></i></div>
+          <div class="recurso-title">Especialidades Juveniles</div>
+          <p class="recurso-desc">Lista de especialidades disponibles con requisitos y pautas para obtenerlas.</p>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span class="recurso-tag">Guía Mayor</span>
+            <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-download"></i> PDF</a>
+          </div>
+        </div>
+
+        <div class="recurso-card" data-category="estudio">
+          <div class="recurso-icon" style="background:linear-gradient(135deg,#6B21A8,#A855F7)"><i class="fa fa-music"></i></div>
+          <div class="recurso-title">Cantos y Alabanzas</div>
+          <p class="recurso-desc">Recopilación de canciones adventistas para campamentos, reuniones y cultos.</p>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span class="recurso-tag" style="background:rgba(107,33,168,0.1); color:#6B21A8;">Estudio</span>
+            <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-download"></i> PDF</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer simple -->
+  <footer style="background:#0F0F2E; padding:32px 0; text-align:center;">
+    <p style="color:rgba(255,255,255,0.4); font-size:0.85rem;">© 2025 FEJAB — Todos los derechos reservados</p>
+    <a href="index.html" style="color:#EAB308; font-size:0.875rem; margin-top:8px; display:inline-block;">← Volver al inicio</a>
+  </footer>
+
+  <button class="back-to-top" id="backToTop"><i class="fa fa-chevron-up"></i></button>
+
+  <script src="main.js"></script>
+  <script>
+    function filterResources(category) {
+      const cards = document.querySelectorAll('.recurso-card');
+      const btns = document.querySelectorAll('[id^="filter-"]');
+      btns.forEach(b => b.className = 'btn btn-outline btn-sm');
+      document.getElementById('filter-' + category).className = 'btn btn-primary btn-sm';
+      cards.forEach(card => {
+        const show = category === 'all' || card.dataset.category === category;
+        card.style.display = show ? 'block' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>

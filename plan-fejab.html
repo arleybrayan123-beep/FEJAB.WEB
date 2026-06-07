@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plan FEJAB — Federación de Jóvenes Adventistas de Boyacá Norte</title>
+  <meta name="description" content="Plan estratégico de FEJAB - Federación de Jóvenes Adventistas de Boyacá Norte 2025" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Red+Hat+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+  <style>
+    .plan-pillar {
+      background: white; border-radius: 16px; padding: 36px; margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(26,26,110,0.08);
+      display: grid; grid-template-columns: 80px 1fr; gap: 24px; align-items: start;
+      transition: all 0.3s;
+    }
+    .plan-pillar:hover { transform: translateX(8px); box-shadow: 0 8px 32px rgba(26,26,110,0.14); }
+    .pillar-icon {
+      width: 72px; height: 72px; border-radius: 16px;
+      background: linear-gradient(135deg, #1A1A6E, #6B21A8);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem; color: white; flex-shrink: 0;
+    }
+    .pillar-num {
+      font-family: 'Bebas Neue', cursive; font-size: 0.85rem; color: #EAB308;
+      letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px;
+    }
+    .pillar-title { font-family: 'Bebas Neue', cursive; font-size: 1.4rem; color: #1A1A6E; margin-bottom: 12px; }
+    .pillar-desc { color: #6B7280; font-size: 0.9rem; line-height: 1.7; }
+    .pillar-list { margin-top: 12px; display: flex; flex-direction: column; gap: 6px; }
+    .pillar-list li {
+      display: flex; align-items: center; gap: 8px;
+      color: #374151; font-size: 0.875rem;
+    }
+    .pillar-list li::before { content: '✓'; color: #6B21A8; font-weight: 700; flex-shrink: 0; }
+    .timeline { position: relative; padding-left: 40px; }
+    .timeline::before { content: ''; position: absolute; left: 14px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #1A1A6E, #6B21A8); }
+    .timeline-item { position: relative; margin-bottom: 32px; }
+    .timeline-dot {
+      position: absolute; left: -33px; top: 4px;
+      width: 18px; height: 18px; border-radius: 50%;
+      background: #1A1A6E; border: 3px solid white;
+      box-shadow: 0 0 0 2px #1A1A6E;
+    }
+    .timeline-phase { font-size: 0.75rem; color: #EAB308; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 4px; }
+    .timeline-title { font-family: 'Bebas Neue', cursive; font-size: 1.1rem; color: #1A1A6E; margin-bottom: 6px; }
+    .timeline-desc { color: #6B7280; font-size: 0.875rem; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo feja horizontal blanco.png" alt="FEJAB Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="logo-fallback" style="display:none;">
+          <span class="logo-text">Jóvenes Adventistas <strong>FEJAB</strong></span>
+        </div>
+      </a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item has-dropdown">
+          <a href="#" class="nav-link">Inicio <i class="fa fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="index.html#hero">Hero</a></li>
+            <li><a href="index.html#cards">Ministerios</a></li>
+            <li><a href="index.html#guia-mayor">Guía Mayor</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="plan-fejab.html" class="nav-link" style="color:#EAB308">Plan FEJAB</a></li>
+        <li class="nav-item"><a href="login.html" class="nav-link nav-btn-login">Iniciar Sesión</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <div class="page-hero" style="padding-bottom:100px;">
+    <div class="page-hero-content container">
+      <div style="display:inline-block; background:rgba(234,179,8,0.15); border:1px solid rgba(234,179,8,0.3); padding:6px 18px; border-radius:100px; margin-bottom:20px;">
+        <span style="color:#EAB308; font-size:0.8rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;">2025 — 2027</span>
+      </div>
+      <h1 class="page-hero-title">Plan Estratégico FEJAB</h1>
+      <p class="page-hero-subtitle">
+        Visión, misión y estrategia para fortalecer el ministerio juvenil adventista en Boyacá Norte
+      </p>
+      <div class="breadcrumb" style="margin-top:24px;">
+        <a href="index.html">Inicio</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Plan FEJAB</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Visión y Misión -->
+  <section style="padding:80px 0; background:white;">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:48px;">
+        <div style="background:linear-gradient(135deg,#1A1A6E,#312E81); border-radius:20px; padding:40px; color:white;">
+          <div style="font-size:2rem; margin-bottom:16px;">🎯</div>
+          <h2 style="font-family:'Bebas Neue',cursive; font-size:1.8rem; letter-spacing:0.02em; margin-bottom:16px; color:#EAB308;">Nuestra Visión</h2>
+          <p style="color:rgba(255,255,255,0.8); line-height:1.75; font-size:0.95rem;">
+            Ser una federación de jóvenes adventistas ejemplares, comprometidos con Cristo, que transformen sus comunidades en Boyacá Norte con fe, servicio y esperanza.
+          </p>
+        </div>
+        <div style="background:#F3F4F6; border-radius:20px; padding:40px;">
+          <div style="font-size:2rem; margin-bottom:16px;">🚀</div>
+          <h2 style="font-family:'Bebas Neue',cursive; font-size:1.8rem; color:#1A1A6E; letter-spacing:0.02em; margin-bottom:16px;">Nuestra Misión</h2>
+          <p style="color:#6B7280; line-height:1.75; font-size:0.95rem;">
+            Fortalecer el ministerio juvenil adventista en Boyacá Norte a través de la formación espiritual, el liderazgo, los clubes y el programa Guía Mayor, uniendo a más de 400 jóvenes en un mismo propósito.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pilares estratégicos -->
+  <section style="padding:80px 0; background:#F3F4F6;">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:48px;">
+        <span class="section-label">Fundamentos del Plan</span>
+        <h2 class="section-title">Pilares Estratégicos</h2>
+      </div>
+
+      <div class="plan-pillar animate-from-left">
+        <div class="pillar-icon">📚</div>
+        <div>
+          <div class="pillar-num">Pilar 01</div>
+          <div class="pillar-title">Formación Espiritual y Bíblica</div>
+          <p class="pillar-desc">Fortalecer la vida devocional y el conocimiento bíblico de los jóvenes a través de recursos, estudios y cursos.</p>
+          <ul class="pillar-list">
+            <li>Estudios bíblicos semanales en cada club</li>
+            <li>Material devocional personalizado para jóvenes</li>
+            <li>Retiros espirituales semestrales</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="plan-pillar animate-from-left" style="animation-delay:0.1s">
+        <div class="pillar-icon">🛡️</div>
+        <div>
+          <div class="pillar-num">Pilar 02</div>
+          <div class="pillar-title">Programa Guía Mayor</div>
+          <p class="pillar-desc">Expandir el programa Guía Mayor en Boyacá Norte, formando líderes juveniles comprometidos con la misión adventista.</p>
+          <ul class="pillar-list">
+            <li>Meta: 50 nuevos Guías Mayores para 2026</li>
+            <li>Talleres de formación regional</li>
+            <li>Ceremonia anual de investidura</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="plan-pillar animate-from-left" style="animation-delay:0.2s">
+        <div class="pillar-icon">👥</div>
+        <div>
+          <div class="pillar-num">Pilar 03</div>
+          <div class="pillar-title">Expansión de Clubes</div>
+          <p class="pillar-desc">Crear nuevos clubes juveniles y fortalecer los existentes en toda la zona de Boyacá Norte.</p>
+          <ul class="pillar-list">
+            <li>Meta: 20 clubes activos para 2027</li>
+            <li>Capacitación de directores y líderes</li>
+            <li>Recursos y materiales para cada club</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="plan-pillar animate-from-left" style="animation-delay:0.3s">
+        <div class="pillar-icon">📱</div>
+        <div>
+          <div class="pillar-num">Pilar 04</div>
+          <div class="pillar-title">Presencia Digital</div>
+          <p class="pillar-desc">Utilizar las plataformas digitales para evangelizar, conectar y crear contenido de valor para el ministerio.</p>
+          <ul class="pillar-list">
+            <li>Sitio web FEJAB funcional y actualizado</li>
+            <li>Redes sociales activas (Instagram, YouTube)</li>
+            <li>Contenido digital para jóvenes</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Timeline de implementación -->
+  <section style="padding:80px 0; background:white;">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:48px;">
+        <span class="section-label">Hoja de Ruta</span>
+        <h2 class="section-title">Plan de Implementación</h2>
+      </div>
+      <div style="max-width:600px; margin:0 auto;">
+        <div class="timeline">
+          <div class="timeline-item animate-fade-up">
+            <div class="timeline-dot"></div>
+            <div class="timeline-phase">Fase 1 — 2025 Q1-Q2</div>
+            <div class="timeline-title">Lanzamiento del Sitio Web</div>
+            <p class="timeline-desc">Desarrollo y lanzamiento del sitio web oficial FEJAB con sistema de login y recursos.</p>
+          </div>
+          <div class="timeline-item animate-fade-up" style="animation-delay:0.1s">
+            <div class="timeline-dot" style="background:#6B21A8; box-shadow:0 0 0 2px #6B21A8;"></div>
+            <div class="timeline-phase">Fase 2 — 2025 Q3</div>
+            <div class="timeline-title">Expansión de Clubes</div>
+            <p class="timeline-desc">Registro y activación de nuevos clubes en municipios donde FEJAB aún no tiene presencia.</p>
+          </div>
+          <div class="timeline-item animate-fade-up" style="animation-delay:0.2s">
+            <div class="timeline-dot" style="background:#1E3A8A; box-shadow:0 0 0 2px #1E3A8A;"></div>
+            <div class="timeline-phase">Fase 3 — 2025 Q4</div>
+            <div class="timeline-title">Campamento Regional</div>
+            <p class="timeline-desc">Primer gran campamento regional FEJAB con jóvenes de todos los clubes de Boyacá Norte.</p>
+          </div>
+          <div class="timeline-item animate-fade-up" style="animation-delay:0.3s">
+            <div class="timeline-dot" style="background:#EAB308; box-shadow:0 0 0 2px #EAB308;"></div>
+            <div class="timeline-phase">Fase 4 — 2026</div>
+            <div class="timeline-title">Meta 400+ Activos</div>
+            <p class="timeline-desc">Consolidar la participación de más de 400 jóvenes activos en el ministerio FEJAB Boyacá Norte.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer simple -->
+  <footer style="background:#0F0F2E; padding:32px 0; text-align:center;">
+    <p style="color:rgba(255,255,255,0.4); font-size:0.85rem;">© 2025 FEJAB — Todos los derechos reservados</p>
+    <a href="index.html" style="color:#EAB308; font-size:0.875rem; margin-top:8px; display:inline-block;">← Volver al inicio</a>
+  </footer>
+
+  <button class="back-to-top" id="backToTop"><i class="fa fa-chevron-up"></i></button>
+  <script src="main.js"></script>
+</body>
+</html>

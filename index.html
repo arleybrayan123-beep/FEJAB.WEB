@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FEJAB - Federación de Jóvenes Adventistas de Boyacá Norte</title>
+  <meta name="description" content="Federación de Jóvenes Adventistas de Boyacá Norte (FEJAB). Únete a más de 400 jóvenes adventistas en Boyacá. Recursos, clubes, Guía Mayor y más." />
+  <meta name="keywords" content="FEJAB, jóvenes adventistas, Boyacá Norte, Guía Mayor, clubes adventistas, ministerio juvenil" />
+
+  <!-- Fuentes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Red+Hat+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo feja horizontal blanco.png" alt="FEJAB Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="logo-fallback" style="display:none;">
+          <span class="logo-icon">
+            <svg viewBox="0 0 40 40" width="36" height="36" fill="none">
+              <circle cx="20" cy="20" r="18" stroke="white" stroke-width="2.5"/>
+              <text x="20" y="26" text-anchor="middle" fill="white" font-size="16" font-family="Bebas Neue">F</text>
+            </svg>
+          </span>
+          <span class="logo-text">Jóvenes Adventistas <strong>FEJAB</strong></span>
+        </div>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item has-dropdown">
+          <a href="#" class="nav-link">Inicio <i class="fa fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="#hero">Hero</a></li>
+            <li><a href="#cards">Nuestros Ministerios</a></li>
+            <li><a href="#guia-mayor">Guía Mayor</a></li>
+            <li><a href="#contador">Comunidad</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="plan-fejab.html" class="nav-link">Plan FEJAB</a></li>
+        <li class="nav-item"><a href="login.html" class="nav-link nav-btn-login">Iniciar Sesión</a></li>
+        <li class="nav-item">
+          <button class="search-btn" id="searchBtn" aria-label="Buscar">
+            <i class="fa fa-search"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Barra de búsqueda -->
+    <div class="search-bar" id="searchBar">
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Buscar en FEJAB..." />
+        <button id="searchClose"><i class="fa fa-times"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SLIDER ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-slider">
+      <!-- Slide 1 -->
+      <div class="slide active" style="background: linear-gradient(135deg, #1A1A6E 0%, #312E81 40%, #6B21A8 100%);">
+        <div class="slide-content">
+          <div class="slide-text animate-fade-up">
+            <h1 class="hero-title">Federación de Jóvenes Adventistas de Boyacá Norte</h1>
+            <p class="hero-subtitle">Únete a nuestra misión de transformar vidas</p>
+            <a href="#cards" class="btn btn-primary hero-cta">Conoce más</a>
+          </div>
+          <div class="slide-image">
+            <img src="banner.jpg.jpeg" alt="Jóvenes Adventistas FEJAB" class="hero-img" />
+          </div>
+        </div>
+        <!-- Decoraciones -->
+        <div class="hero-decorations">
+          <span class="dot-yellow" style="top:30%;left:5%"></span>
+          <span class="dot-yellow" style="top:60%;left:8%"></span>
+          <span class="dot-yellow" style="top:45%;left:3%"></span>
+          <div class="chevron-right" style="bottom:20%;right:15%">&#10095;&#10095;</div>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="slide" style="background: linear-gradient(135deg, #0F0F5A 0%, #1A1A6E 50%, #4C1D95 100%);">
+        <div class="slide-content">
+          <div class="slide-text animate-fade-up">
+            <h1 class="hero-title">Un Llamado, Una Misión, Un Propósito</h1>
+            <p class="hero-subtitle">Sé parte del cambio en Boyacá Norte</p>
+            <a href="#guia-mayor" class="btn btn-primary hero-cta">Saber más</a>
+          </div>
+          <div class="slide-image slide-image-alt">
+            <div class="circle-frame">
+              <i class="fa fa-cross circle-icon"></i>
+            </div>
+          </div>
+        </div>
+        <div class="hero-decorations">
+          <span class="dot-yellow" style="top:25%;right:20%"></span>
+          <span class="dot-yellow" style="top:70%;right:25%"></span>
+          <div class="chevron-left" style="top:50%;left:15%">&#10094;&#10094;</div>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide" style="background: linear-gradient(135deg, #1E3A8A 0%, #1A1A6E 40%, #7E22CE 100%);">
+        <div class="slide-content">
+          <div class="slide-text animate-fade-up">
+            <h1 class="hero-title">Más de 400 Jóvenes Listos para Servir</h1>
+            <p class="hero-subtitle">Boyacá Norte unida en fe y servicio</p>
+            <a href="#contador" class="btn btn-primary hero-cta">Únete</a>
+          </div>
+          <div class="slide-image slide-image-alt">
+            <div class="circle-frame">
+              <i class="fa fa-users circle-icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dots de navegación -->
+    <div class="hero-dots" id="heroDots">
+      <button class="dot active" data-index="0" aria-label="Slide 1"></button>
+      <button class="dot" data-index="1" aria-label="Slide 2"></button>
+      <button class="dot" data-index="2" aria-label="Slide 3"></button>
+    </div>
+
+    <!-- Flechas del slider -->
+    <button class="slider-arrow slider-prev" id="sliderPrev" aria-label="Anterior">
+      <i class="fa fa-chevron-left"></i>
+    </button>
+    <button class="slider-arrow slider-next" id="sliderNext" aria-label="Siguiente">
+      <i class="fa fa-chevron-right"></i>
+    </button>
+  </section>
+
+  <!-- ========== SECCIÓN 3 TARJETAS ========== -->
+  <section class="cards-section" id="cards">
+    <div class="container">
+      <div class="cards-grid">
+
+        <!-- Card 1: Recursos y materiales -->
+        <article class="card animate-from-left" id="card-recursos">
+          <div class="card-img-wrap">
+            <img src="PARTE SUPERIOR PAGINA WEB.png" alt="Recursos y materiales" class="card-img" style="object-position: 20% 50%;" />
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Recursos y materiales</h3>
+            <p class="card-text">¡Descubre un mundo de posibilidades para tu crecimiento espiritual! Guías, manuales y materiales de estudio a tu alcance.</p>
+            <a href="recursos.html" class="btn btn-outline card-btn">Ver recursos</a>
+          </div>
+        </article>
+
+        <!-- Card 2: Aprende con nosotros -->
+        <article class="card animate-fade-up" id="card-aprende" style="animation-delay:0.2s">
+          <div class="card-img-wrap">
+            <img src="PARTE INFERIOR PAGINA WEB.png" alt="Aprende con nosotros" class="card-img" style="object-position: 50% 10%;" />
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Aprende con nosotros</h3>
+            <p class="card-text">Cursos, talleres y contenido educativo diseñado para potenciar tu fe, liderazgo y habilidades como joven adventista.</p>
+            <a href="aprende.html" class="btn btn-outline card-btn">Comenzar</a>
+          </div>
+        </article>
+
+        <!-- Card 3: Nuestros clubes -->
+        <article class="card animate-from-right" id="card-clubes" style="animation-delay:0.4s">
+          <div class="card-img-wrap">
+            <img src="PARTE SUPERIOR PAGINA WEB.png" alt="Nuestros clubes" class="card-img" style="object-position: 80% 50%;" />
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Nuestros clubes</h3>
+            <p class="card-text">Conoce los clubes de jóvenes adventistas en Boyacá Norte. Encuentra tu comunidad y vive la aventura del servicio.</p>
+            <a href="clubes.html" class="btn btn-outline card-btn">Ver clubes</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECCIÓN GUÍA MAYOR ========== -->
+  <section class="guia-mayor-section" id="guia-mayor">
+    <div class="container">
+      <div class="guia-grid">
+        <div class="guia-text animate-from-left">
+          <span class="section-label">Ministerio Juvenil</span>
+          <h2 class="section-title">Conviértete en un <span class="text-accent">Guía Mayor</span></h2>
+          <p class="section-text">
+            Ser un Guía Mayor es aceptar el llamado a ser faro y guía en este mundo lleno de oscuridad, para compartir esperanza con aquellos que más lo necesitan.
+          </p>
+          <p class="section-text">
+            Es ser un mentor, un amigo, un modelo a seguir, y sobre todo, un testigo vivo del amor y la gracia de Dios.
+          </p>
+          <div class="guia-features">
+            <div class="feature-item">
+              <i class="fa fa-star feature-icon"></i>
+              <span>Liderazgo y Servicio</span>
+            </div>
+            <div class="feature-item">
+              <i class="fa fa-heart feature-icon"></i>
+              <span>Fe y Compromiso</span>
+            </div>
+            <div class="feature-item">
+              <i class="fa fa-users feature-icon"></i>
+              <span>Comunidad y Familia</span>
+            </div>
+          </div>
+          <a href="guia-mayor.html" class="btn btn-primary btn-lg" id="btn-me-apunto">Me apunto</a>
+        </div>
+        <div class="guia-image animate-fade-scale">
+          <div class="guia-img-container">
+            <img src="banner.jpg.jpeg" alt="Guía Mayor - Jóvenes Adventistas" class="guia-img" />
+            <div class="guia-badge">
+              <i class="fa fa-shield-halved"></i>
+              <span>Guía Mayor</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BANNER FILOSÓFICO ========== -->
+  <section class="filosofia-section" id="filosofia">
+    <div class="filosofia-bg"></div>
+    <div class="container">
+      <div class="filosofia-grid">
+        <div class="filosofia-text animate-fade-up">
+          <span class="filosofia-label"><i class="fa fa-dove"></i> Nuestra Filosofía</span>
+          <p class="filosofia-quote">
+            "La filosofía de los jóvenes adventistas es un faro de esperanza y compromiso, guiando a cada individuo hacia una vida de propósito, servicio y conexión con Dios."
+          </p>
+          <p class="filosofia-body">
+            Fundamentada en la fe en Cristo y en los principios bíblicos, nuestra filosofía nos llama a ser agentes activos de cambio, portadores de luz en un mundo que anhela la verdad y el amor divinos.
+          </p>
+        </div>
+        <div class="filosofia-dots animate-fade-up">
+          <!-- Dots decorativos blancos con flecha -->
+          <div class="dots-nav">
+            <button class="dots-arrow"><i class="fa fa-chevron-left"></i></button>
+            <div class="dots-row">
+              <span class="wdot"></span><span class="wdot"></span><span class="wdot"></span>
+              <span class="wdot"></span><span class="wdot"></span><span class="wdot"></span>
+              <span class="wdot"></span><span class="wdot"></span><span class="wdot"></span>
+              <span class="wdot"></span><span class="wdot"></span>
+            </div>
+          </div>
+          <div class="bible-verse">
+            <i class="fa fa-book-open"></i>
+            <p>"Porque yo sé los planes que tengo para ustedes..."<br/><em>— Jeremías 29:11</em></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECCIÓN CONTADOR ========== -->
+  <section class="contador-section" id="contador">
+    <div class="container">
+      <div class="contador-content animate-fade-up">
+        <div class="contador-numbers">
+          <div class="contador-item">
+            <span class="count-number" data-target="400">0</span>
+            <span class="count-plus">+</span>
+            <p class="count-label">Jóvenes Adventistas</p>
+          </div>
+          <div class="contador-divider"></div>
+          <div class="contador-item">
+            <span class="count-number" data-target="15">0</span>
+            <span class="count-plus">+</span>
+            <p class="count-label">Clubes Activos</p>
+          </div>
+          <div class="contador-divider"></div>
+          <div class="contador-item">
+            <span class="count-number" data-target="8">0</span>
+            <span class="count-plus">+</span>
+            <p class="count-label">Años de Ministerio</p>
+          </div>
+        </div>
+        <div class="contador-text">
+          <h2 class="contador-title">
+            En la zona de Boyacá contamos con más de <span class="highlight">400 jóvenes Adventistas</span>
+          </h2>
+          <p class="contador-subtitle">¡Únete a esta hermosa familia!</p>
+          <a href="registro.html" class="btn btn-primary btn-lg">Unirme ahora</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECCIÓN CTA AMARILLA ========== -->
+  <section class="cta-section" id="cta">
+    <div class="cta-decorations">
+      <div class="cta-dots-left">
+        <div class="dot-row">
+          <span class="bdot"></span><span class="bdot"></span><span class="bdot"></span>
+          <span class="bdot"></span><span class="bdot"></span>
+        </div>
+        <div class="dot-row">
+          <span class="bdot"></span><span class="bdot"></span><span class="bdot"></span>
+          <span class="bdot"></span><span class="bdot"></span>
+        </div>
+        <div class="cta-chevron">&#10095;&#10095;</div>
+      </div>
+      <div class="cta-content animate-pulse">
+        <h2 class="cta-title">¿Estás interesad@ en crear contenido de valor para el ministerio juvenil de la zona de Boyacá?</h2>
+        <p class="cta-subtitle">Sé parte de nuestro equipo creativo y comparte el mensaje de esperanza</p>
+        <a href="registro.html" class="btn btn-dark btn-lg" id="btn-unirme">Unirme</a>
+      </div>
+      <div class="cta-dots-right">
+        <div class="dot-row">
+          <span class="bdot"></span><span class="bdot"></span><span class="bdot"></span>
+          <span class="bdot"></span><span class="bdot"></span>
+        </div>
+        <div class="dot-row">
+          <span class="bdot"></span><span class="bdot"></span><span class="bdot"></span>
+          <span class="bdot"></span><span class="bdot"></span>
+        </div>
+        <div class="cta-chevron cta-chevron-left">&#10094;&#10094;</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Logo y descripción -->
+          <div class="footer-brand">
+            <img src="logo feja horizontal blanco.png" alt="FEJAB Logo" class="footer-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+            <div class="footer-logo-fallback" style="display:none;">
+              <span class="footer-logo-text">FEJAB</span>
+            </div>
+            <p class="footer-desc">
+              Federación de Jóvenes Adventistas de Boyacá Norte. Uniendo corazones, transformando vidas a través de la fe y el servicio.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+
+          <!-- Links -->
+          <div class="footer-links">
+            <h4 class="footer-title">Páginas</h4>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="recursos.html">Recursos y Materiales</a></li>
+              <li><a href="aprende.html">Aprende con Nosotros</a></li>
+              <li><a href="clubes.html">Nuestros Clubes</a></li>
+              <li><a href="guia-mayor.html">Guía Mayor</a></li>
+              <li><a href="plan-fejab.html">Plan FEJAB</a></li>
+            </ul>
+          </div>
+
+          <!-- Cuenta -->
+          <div class="footer-links">
+            <h4 class="footer-title">Mi Cuenta</h4>
+            <ul>
+              <li><a href="login.html">Iniciar Sesión</a></li>
+              <li><a href="registro.html">Registrarse</a></li>
+              <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+          </div>
+
+          <!-- Contacto -->
+          <div class="footer-contact">
+            <h4 class="footer-title">Contacto</h4>
+            <div class="contact-item">
+              <i class="fa fa-map-marker-alt"></i>
+              <span>Boyacá Norte, Colombia</span>
+            </div>
+            <div class="contact-item">
+              <i class="fa fa-envelope"></i>
+              <span>contacto@fejab.org</span>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-whatsapp"></i>
+              <span>+57 XXX XXX XXXX</span>
+            </div>
+            <a href="#" class="btn btn-outline btn-sm footer-contact-btn">Contactar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2025 FEJAB — Federación de Jóvenes Adventistas de Boyacá Norte. Todos los derechos reservados.</p>
+        <p>Desarrollado con <i class="fa fa-heart" style="color:#EAB308"></i> para el ministerio juvenil adventista</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón volver arriba -->
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <i class="fa fa-chevron-up"></i>
+  </button>
+
+  <script src="main.js"></script>
+</body>
+</html>

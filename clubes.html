@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuestros Clubes — FEJAB</title>
+  <meta name="description" content="Conoce los clubes de jóvenes adventistas en Boyacá Norte - FEJAB" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Red+Hat+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo feja horizontal blanco.png" alt="FEJAB Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="logo-fallback" style="display:none;">
+          <span class="logo-text">Jóvenes Adventistas <strong>FEJAB</strong></span>
+        </div>
+      </a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="recursos.html" class="nav-link">Recursos</a></li>
+        <li><a href="clubes.html" class="nav-link" style="color:#EAB308">Clubes</a></li>
+        <li><a href="login.html" class="nav-link nav-btn-login">Iniciar Sesión</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="page-hero-content container">
+      <h1 class="page-hero-title">Nuestros Clubes</h1>
+      <p class="page-hero-subtitle">Comunidades de jóvenes adventistas unidos por la fe y el servicio en Boyacá Norte</p>
+      <div class="breadcrumb">
+        <a href="index.html">Inicio</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Nuestros Clubes</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Estadística -->
+  <div style="background:#F3F4F6; padding:32px 0; text-align:center; border-bottom:1px solid rgba(26,26,110,0.08);">
+    <div class="container">
+      <div style="display:flex; justify-content:center; gap:60px; flex-wrap:wrap;">
+        <div>
+          <div style="font-family:'Bebas Neue',cursive; font-size:2.8rem; color:#1A1A6E; line-height:1;">15+</div>
+          <div style="font-size:0.8rem; color:#6B7280; font-weight:600; text-transform:uppercase; letter-spacing:0.08em;">Clubes Activos</div>
+        </div>
+        <div>
+          <div style="font-family:'Bebas Neue',cursive; font-size:2.8rem; color:#6B21A8; line-height:1;">400+</div>
+          <div style="font-size:0.8rem; color:#6B7280; font-weight:600; text-transform:uppercase; letter-spacing:0.08em;">Miembros</div>
+        </div>
+        <div>
+          <div style="font-family:'Bebas Neue',cursive; font-size:2.8rem; color:#1E3A8A; line-height:1;">8+</div>
+          <div style="font-size:0.8rem; color:#6B7280; font-weight:600; text-transform:uppercase; letter-spacing:0.08em;">Municipios</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Clubes -->
+  <section class="section-content">
+    <div class="container">
+      <div class="clubes-grid">
+
+        <div class="club-card animate-fade-up">
+          <div class="club-card-header">
+            <span class="club-number">01</span>
+            <div class="club-icon"><i class="fa fa-star"></i></div>
+            <div class="club-name">Club Orión</div>
+            <div class="club-location"><i class="fa fa-map-marker-alt"></i> Tunja, Boyacá</div>
+          </div>
+          <div class="club-card-body">
+            <div class="club-members"><i class="fa fa-users"></i> 35 miembros activos</div>
+            <p style="color:#6B7280; font-size:0.875rem; line-height:1.6; margin-bottom:16px;">
+              Club líder de la zona norte. Especializado en actividades al aire libre y servicio comunitario.
+            </p>
+            <a href="#" class="btn btn-primary btn-sm">Ver más</a>
+          </div>
+        </div>
+
+        <div class="club-card animate-fade-up" style="animation-delay:0.1s">
+          <div class="club-card-header">
+            <span class="club-number">02</span>
+            <div class="club-icon"><i class="fa fa-bolt"></i></div>
+            <div class="club-name">Club Relámpagos</div>
+            <div class="club-location"><i class="fa fa-map-marker-alt"></i> Duitama, Boyacá</div>
+          </div>
+          <div class="club-card-body">
+            <div class="club-members"><i class="fa fa-users"></i> 28 miembros activos</div>
+            <p style="color:#6B7280; font-size:0.875rem; line-height:1.6; margin-bottom:16px;">
+              Club juvenil con énfasis en música, arte y evangelismo creativo en la ciudad de Duitama.
+            </p>
+            <a href="#" class="btn btn-primary btn-sm">Ver más</a>
+          </div>
+        </div>
+
+        <div class="club-card animate-fade-up" style="animation-delay:0.2s">
+          <div class="club-card-header">
+            <span class="club-number">03</span>
+            <div class="club-icon"><i class="fa fa-mountain"></i></div>
+            <div class="club-name">Club Cóndores del Norte</div>
+            <div class="club-location"><i class="fa fa-map-marker-alt"></i> Sogamoso, Boyacá</div>
+          </div>
+          <div class="club-card-body">
+            <div class="club-members"><i class="fa fa-users"></i> 42 miembros activos</div>
+            <p style="color:#6B7280; font-size:0.875rem; line-height:1.6; margin-bottom:16px;">
+              Club de aventura y exploración. Líderes en campismo, naturaleza y Guía Mayor en Sogamoso.
+            </p>
+            <a href="#" class="btn btn-primary btn-sm">Ver más</a>
+          </div>
+        </div>
+
+        <div class="club-card animate-fade-up" style="animation-delay:0.3s">
+          <div class="club-card-header">
+            <span class="club-number">04</span>
+            <div class="club-icon"><i class="fa fa-dove"></i></div>
+            <div class="club-name">Club Palomas de Paz</div>
+            <div class="club-location"><i class="fa fa-map-marker-alt"></i> Chiquinquirá, Boyacá</div>
+          </div>
+          <div class="club-card-body">
+            <div class="club-members"><i class="fa fa-users"></i> 25 miembros activos</div>
+            <p style="color:#6B7280; font-size:0.875rem; line-height:1.6; margin-bottom:16px;">
+              Club de jóvenes comprometidos con la paz y la reconciliación. Trabajo social y misión.
+            </p>
+            <a href="#" class="btn btn-primary btn-sm">Ver más</a>
+          </div>
+        </div>
+
+        <div class="club-card animate-fade-up" style="animation-delay:0.4s">
+          <div class="club-card-header">
+            <span class="club-number">05</span>
+            <div class="club-icon"><i class="fa fa-fire"></i></div>
+            <div class="club-name">Club Llamas del Espíritu</div>
+            <div class="club-location"><i class="fa fa-map-marker-alt"></i> Paipa, Boyacá</div>
+          </div>
+          <div class="club-card-body">
+            <div class="club-members"><i class="fa fa-users"></i> 30 miembros activos</div>
+            <p style="color:#6B7280; font-size:0.875rem; line-height:1.6; margin-bottom:16px;">
+              Club evangelístico con fuerte énfasis en alabanza, adoración y testimonio personal.
+            </p>
+            <a href="#" class="btn btn-primary btn-sm">Ver más</a>
+          </div>
+        </div>
+
+        <div class="club-card animate-fade-up" style="animation-delay:0.5s">
+          <div class="club-card-header" style="background:linear-gradient(135deg,#EAB308,#D97706);">
+            <span class="club-number" style="color:rgba(26,26,110,0.2);">+</span>
+            <div class="club-icon" style="color:#1A1A6E;"><i class="fa fa-plus"></i></div>
+            <div class="club-name" style="color:#1A1A6E;">¿Tu Club?</div>
+            <div class="club-location" style="color:rgba(26,26,110,0.65);"><i class="fa fa-map-marker-alt"></i> Boyacá Norte</div>
+          </div>
+          <div class="club-card-body">
+            <div class="club-members" style="color:#6B21A8;"><i class="fa fa-users"></i> Únete a FEJAB</div>
+            <p style="color:#6B7280; font-size:0.875rem; line-height:1.6; margin-bottom:16px;">
+              ¿Tu club no aparece? Registra tu club y sé parte oficial de la Federación de Jóvenes Adventistas.
+            </p>
+            <a href="registro.html" class="btn btn-dark btn-sm">Registrar club</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer simple -->
+  <footer style="background:#0F0F2E; padding:32px 0; text-align:center;">
+    <p style="color:rgba(255,255,255,0.4); font-size:0.85rem;">© 2025 FEJAB — Todos los derechos reservados</p>
+    <a href="index.html" style="color:#EAB308; font-size:0.875rem; margin-top:8px; display:inline-block;">← Volver al inicio</a>
+  </footer>
+
+  <button class="back-to-top" id="backToTop"><i class="fa fa-chevron-up"></i></button>
+  <script src="main.js"></script>
+</body>
+</html>

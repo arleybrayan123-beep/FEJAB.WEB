@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registrarse — FEJAB</title>
+  <meta name="description" content="Únete a FEJAB - Federación de Jóvenes Adventistas de Boyacá Norte" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Red+Hat+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo feja horizontal blanco.png" alt="FEJAB Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="logo-fallback" style="display:none;">
+          <span class="logo-text">Jóvenes Adventistas <strong>FEJAB</strong></span>
+        </div>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">← Inicio</a></li>
+        <li><a href="login.html" class="nav-link nav-btn-login">Iniciar Sesión</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Auth Page -->
+  <div class="auth-page">
+    <div class="auth-container">
+      <div class="auth-card" style="max-width:520px;">
+        <!-- Logo -->
+        <div class="auth-logo">
+          <img src="logo feja horizontal blanco.png" alt="FEJAB" onerror="this.style.display='none';" />
+          <div class="auth-logo-text">FEJAB</div>
+        </div>
+
+        <h1 class="auth-title">Crear Cuenta</h1>
+        <p class="auth-subtitle">Únete a la familia de jóvenes adventistas de Boyacá Norte</p>
+
+        <!-- Alerta -->
+        <div class="alert" id="registerAlert" role="alert"></div>
+
+        <form id="registerForm" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="regNombre">Nombre completo *</label>
+            <input type="text" id="regNombre" class="form-input" placeholder="Tu nombre completo" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="regEmail">Correo electrónico *</label>
+            <input type="email" id="regEmail" class="form-input" placeholder="tu@correo.com" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="regClub">Club adventista <span style="opacity:.5">(opcional)</span></label>
+            <input type="text" id="regClub" class="form-input" placeholder="Nombre de tu club" />
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+            <div class="form-group">
+              <label class="form-label" for="regPassword">Contraseña *</label>
+              <div class="input-icon-wrap">
+                <input type="password" id="regPassword" class="form-input" placeholder="Mín. 6 caracteres" required />
+                <i class="fa fa-eye input-icon toggle-password" data-target="regPassword"></i>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="regConfirm">Confirmar contraseña *</label>
+              <div class="input-icon-wrap">
+                <input type="password" id="regConfirm" class="form-input" placeholder="Repite la contraseña" required />
+                <i class="fa fa-eye input-icon toggle-password" data-target="regConfirm"></i>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-bottom:20px;">
+            <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer;">
+              <input type="checkbox" id="acceptTerms" style="margin-top:3px; flex-shrink:0; accent-color:#EAB308;" />
+              <span style="color:rgba(255,255,255,0.6); font-size:0.825rem; line-height:1.5;">
+                Acepto los <a href="#" style="color:#EAB308;">términos y condiciones</a> y la
+                <a href="#" style="color:#EAB308;">política de privacidad</a> de FEJAB
+              </span>
+            </label>
+          </div>
+
+          <button type="submit" class="auth-btn">
+            <i class="fa fa-user-plus"></i> Crear mi cuenta
+          </button>
+        </form>
+
+        <div class="auth-link">
+          ¿Ya tienes cuenta? <a href="login.html">Iniciar sesión →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

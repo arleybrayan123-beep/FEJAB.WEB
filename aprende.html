@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aprende con Nosotros — FEJAB</title>
+  <meta name="description" content="Cursos, talleres y contenido educativo para jóvenes adventistas de Boyacá Norte" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Red+Hat+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pages.css" />
+  <style>
+    .cursos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px; }
+    .curso-card {
+      background: white; border-radius: 16px; overflow: hidden;
+      box-shadow: 0 4px 20px rgba(26,26,110,0.08); transition: all 0.3s;
+    }
+    .curso-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(26,26,110,0.15); }
+    .curso-header {
+      height: 140px; display: flex; align-items: center; justify-content: center;
+      font-size: 3.5rem; position: relative; overflow: hidden;
+    }
+    .curso-badge {
+      position: absolute; top: 12px; right: 12px;
+      background: rgba(255,255,255,0.2); color: white;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 100px; backdrop-filter: blur(4px);
+    }
+    .curso-body { padding: 24px; }
+    .curso-title { font-family: 'Bebas Neue', cursive; font-size: 1.2rem; color: #1A1A6E; margin-bottom: 8px; }
+    .curso-desc { color: #6B7280; font-size: 0.875rem; line-height: 1.6; margin-bottom: 16px; }
+    .curso-meta { display: flex; gap: 16px; font-size: 0.78rem; color: #9CA3AF; margin-bottom: 16px; }
+    .curso-meta span { display: flex; align-items: center; gap: 4px; }
+    .progress-bar {
+      height: 4px; background: #E5E7EB; border-radius: 2px; margin-bottom: 16px; overflow: hidden;
+    }
+    .progress-fill { height: 100%; border-radius: 2px; background: linear-gradient(to right, #1A1A6E, #6B21A8); }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo feja horizontal blanco.png" alt="FEJAB Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="logo-fallback" style="display:none;">
+          <span class="logo-text">Jóvenes Adventistas <strong>FEJAB</strong></span>
+        </div>
+      </a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="recursos.html" class="nav-link">Recursos</a></li>
+        <li><a href="clubes.html" class="nav-link">Clubes</a></li>
+        <li><a href="login.html" class="nav-link nav-btn-login">Iniciar Sesión</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="page-hero-content container">
+      <h1 class="page-hero-title">Aprende con Nosotros</h1>
+      <p class="page-hero-subtitle">Formación espiritual, liderazgo y habilidades para el ministerio adventista</p>
+      <div class="breadcrumb">
+        <a href="index.html">Inicio</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Aprende</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cursos -->
+  <section class="section-content">
+    <div class="container">
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:40px; flex-wrap:wrap; gap:16px;">
+        <div>
+          <h2 style="font-family:'Bebas Neue',cursive; font-size:1.8rem; color:#1A1A6E; letter-spacing:0.02em;">Cursos Disponibles</h2>
+          <p style="color:#6B7280; font-size:0.9rem;">Contenido diseñado para tu crecimiento espiritual y ministerial</p>
+        </div>
+        <a href="login.html" class="btn btn-primary">
+          <i class="fa fa-graduation-cap"></i> Inscribirse
+        </a>
+      </div>
+
+      <div class="cursos-grid">
+
+        <div class="curso-card animate-fade-up">
+          <div class="curso-header" style="background:linear-gradient(135deg,#1A1A6E,#312E81);">
+            📖
+            <span class="curso-badge">Gratuito</span>
+          </div>
+          <div class="curso-body">
+            <div class="curso-title">Fundamentos de la Fe Adventista</div>
+            <p class="curso-desc">Las 28 creencias fundamentales de la Iglesia Adventista explicadas de forma clara y práctica para jóvenes.</p>
+            <div class="curso-meta">
+              <span><i class="fa fa-clock"></i> 8 horas</span>
+              <span><i class="fa fa-layer-group"></i> 12 módulos</span>
+              <span><i class="fa fa-users"></i> 45 inscritos</span>
+            </div>
+            <a href="login.html" class="btn btn-primary btn-sm" style="width:100%; justify-content:center;">Iniciar curso</a>
+          </div>
+        </div>
+
+        <div class="curso-card animate-fade-up" style="animation-delay:0.1s">
+          <div class="curso-header" style="background:linear-gradient(135deg,#6B21A8,#7E22CE);">
+            🎤
+            <span class="curso-badge">Popular</span>
+          </div>
+          <div class="curso-body">
+            <div class="curso-title">Liderazgo Juvenil Cristiano</div>
+            <p class="curso-desc">Desarrolla las habilidades de liderazgo desde una perspectiva bíblica. Ideal para directores y líderes de clubes.</p>
+            <div class="curso-meta">
+              <span><i class="fa fa-clock"></i> 12 horas</span>
+              <span><i class="fa fa-layer-group"></i> 18 módulos</span>
+              <span><i class="fa fa-users"></i> 78 inscritos</span>
+            </div>
+            <a href="login.html" class="btn btn-primary btn-sm" style="width:100%; justify-content:center;">Iniciar curso</a>
+          </div>
+        </div>
+
+        <div class="curso-card animate-fade-up" style="animation-delay:0.2s">
+          <div class="curso-header" style="background:linear-gradient(135deg,#1E3A8A,#1D4ED8);">
+            🏕️
+          </div>
+          <div class="curso-body">
+            <div class="curso-title">Manual de Campismo Adventista</div>
+            <p class="curso-desc">Todo lo que necesitas saber para organizar y liderar campamentos exitosos. Seguridad, actividades y más.</p>
+            <div class="curso-meta">
+              <span><i class="fa fa-clock"></i> 6 horas</span>
+              <span><i class="fa fa-layer-group"></i> 8 módulos</span>
+              <span><i class="fa fa-users"></i> 32 inscritos</span>
+            </div>
+            <a href="login.html" class="btn btn-primary btn-sm" style="width:100%; justify-content:center;">Iniciar curso</a>
+          </div>
+        </div>
+
+        <div class="curso-card animate-fade-up" style="animation-delay:0.3s">
+          <div class="curso-header" style="background:linear-gradient(135deg,#EAB308,#D97706);">
+            ✝️
+          </div>
+          <div class="curso-body">
+            <div class="curso-title">Evangelismo y Testimonio Joven</div>
+            <p class="curso-desc">Aprende a compartir tu fe de forma efectiva. Métodos modernos de evangelismo para la generación digital.</p>
+            <div class="curso-meta">
+              <span><i class="fa fa-clock"></i> 10 horas</span>
+              <span><i class="fa fa-layer-group"></i> 15 módulos</span>
+              <span><i class="fa fa-users"></i> 56 inscritos</span>
+            </div>
+            <a href="login.html" class="btn btn-primary btn-sm" style="width:100%; justify-content:center;">Iniciar curso</a>
+          </div>
+        </div>
+
+        <div class="curso-card animate-fade-up" style="animation-delay:0.4s">
+          <div class="curso-header" style="background:linear-gradient(135deg,#059669,#047857);">
+            🎵
+          </div>
+          <div class="curso-body">
+            <div class="curso-title">Música y Adoración Adventista</div>
+            <p class="curso-desc">Fundamentos de la música en el culto adventista. Teoría, práctica y principios de una adoración centrada en Cristo.</p>
+            <div class="curso-meta">
+              <span><i class="fa fa-clock"></i> 7 horas</span>
+              <span><i class="fa fa-layer-group"></i> 10 módulos</span>
+              <span><i class="fa fa-users"></i> 29 inscritos</span>
+            </div>
+            <a href="login.html" class="btn btn-primary btn-sm" style="width:100%; justify-content:center;">Iniciar curso</a>
+          </div>
+        </div>
+
+        <div class="curso-card animate-fade-up" style="animation-delay:0.5s">
+          <div class="curso-header" style="background:linear-gradient(135deg,#7C3AED,#6D28D9);">
+            🛡️
+            <span class="curso-badge">Nuevo</span>
+          </div>
+          <div class="curso-body">
+            <div class="curso-title">Formación Guía Mayor</div>
+            <p class="curso-desc">Curso oficial de preparación para el programa Guía Mayor. Cubre todos los requisitos del manual oficial.</p>
+            <div class="curso-meta">
+              <span><i class="fa fa-clock"></i> 20 horas</span>
+              <span><i class="fa fa-layer-group"></i> 25 módulos</span>
+              <span><i class="fa fa-users"></i> 18 inscritos</span>
+            </div>
+            <a href="login.html" class="btn btn-primary btn-sm" style="width:100%; justify-content:center;">Iniciar curso</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:linear-gradient(135deg,#1A1A6E,#6B21A8); padding:60px 0; text-align:center;">
+    <div class="container">
+      <h2 style="font-family:'Bebas Neue',cursive; font-size:2.5rem; color:white; margin-bottom:12px; letter-spacing:0.02em;">
+        ¿Listo para Crecer?
+      </h2>
+      <p style="color:rgba(255,255,255,0.7); margin-bottom:28px;">Crea tu cuenta gratuita y accede a todos los cursos</p>
+      <a href="registro.html" class="btn btn-primary btn-lg" style="background:#EAB308; color:#1A1A6E;">
+        <i class="fa fa-rocket"></i> Comenzar gratis
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer simple -->
+  <footer style="background:#0F0F2E; padding:32px 0; text-align:center;">
+    <p style="color:rgba(255,255,255,0.4); font-size:0.85rem;">© 2025 FEJAB — Todos los derechos reservados</p>
+    <a href="index.html" style="color:#EAB308; font-size:0.875rem; margin-top:8px; display:inline-block;">← Volver al inicio</a>
+  </footer>
+
+  <button class="back-to-top" id="backToTop"><i class="fa fa-chevron-up"></i></button>
+  <script src="main.js"></script>
+</body>
+</html>
