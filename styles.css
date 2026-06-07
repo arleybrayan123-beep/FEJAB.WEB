@@ -992,7 +992,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     min-height: 750px;
     height: 100vh;
     max-height: none;
-    background-position: top center;
+    background-position: 85% center;
     background-size: cover;
   }
   .hero-title { font-size: 2.2rem; }
@@ -1010,7 +1010,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     min-height: 750px;
     height: 100vh;
     max-height: none;
-    background-position: top center;
+    background-position: 85% center;
     background-size: cover;
   }
   .slide-content { justify-content: flex-start; padding: 80px 20px 40px; }
