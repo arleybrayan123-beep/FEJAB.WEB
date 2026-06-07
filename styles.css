@@ -989,14 +989,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .dropdown { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; background: rgba(255,255,255,0.06); margin-top: 4px; }
   .cards-grid { grid-template-columns: 1fr; }
   .hero {
-    min-height: 420px;
+    min-height: 750px;
+    height: 100vh;
     max-height: none;
     background-position: top center;
     background-size: cover;
   }
   .hero-title { font-size: 2.2rem; }
   .slide-image { display: none; }
-  .slide-content { flex-direction: column; text-align: center; justify-content: center; padding: 40px 20px; }
+  .slide-content { flex-direction: column; text-align: center; justify-content: flex-start; padding: 60px 20px 40px; }
   .cta-dots-left, .cta-dots-right { display: none; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .footer-bottom .container { flex-direction: column; text-align: center; }
@@ -1006,13 +1007,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 @media (max-width: 480px) {
   .hero {
-    min-height: 380px;
-    height: auto;
+    min-height: 750px;
+    height: 100vh;
     max-height: none;
     background-position: top center;
     background-size: cover;
   }
-  .slide-content { padding: 30px 20px; }
+  .slide-content { justify-content: flex-start; padding: 80px 20px 40px; }
   .hero-title { font-size: 1.9rem; }
   .btn-lg { padding: 14px 32px; }
   .guia-img { height: 350px; object-position: center top; }
