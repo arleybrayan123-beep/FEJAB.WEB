@@ -507,7 +507,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   width: 100%;
   height: 420px;
   object-fit: cover;
-  object-position: top center;
+  object-position: center top;
 }
 .guia-badge {
   position: absolute;
@@ -978,7 +978,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .footer-bottom .container { flex-direction: column; text-align: center; }
   .contador-numbers { flex-direction: column; gap: 24px; }
   .contador-divider { width: 60px; height: 1px; }
-  .guia-img { object-position: 85% top; }
+  .guia-img { object-position: center top; }
 }
 @media (max-width: 480px) {
   .hero {
@@ -991,5 +991,5 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .slide-content { padding: 30px 20px; }
   .hero-title { font-size: 1.9rem; }
   .btn-lg { padding: 14px 32px; }
-  .guia-img { height: 350px; object-position: 85% top; }
+  .guia-img { height: 350px; object-position: center top; }
 }
