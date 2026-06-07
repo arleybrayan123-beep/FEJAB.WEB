@@ -232,6 +232,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   min-height: 480px;
   max-height: 700px;
   overflow: hidden;
+  background: url('banner.jpg.jpeg') center/cover no-repeat;
 }
 .hero-slider { position: relative; width: 100%; height: 100%; }
 .slide {
@@ -241,6 +242,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transition: opacity 0.8s ease;
   display: flex;
   align-items: center;
+  background: linear-gradient(135deg, rgba(26,26,110,0.82) 0%, rgba(49,46,129,0.75) 40%, rgba(107,33,168,0.70) 100%) !important;
 }
 .slide.active { opacity: 1; z-index: 2; }
 .slide-content {
@@ -962,12 +964,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .nav-link { width: 100%; padding: 14px 16px; }
   .dropdown { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; background: rgba(255,255,255,0.06); margin-top: 4px; }
   .cards-grid { grid-template-columns: 1fr; }
-  .hero { min-height: 750px; max-height: none; }
+  .hero {
+    min-height: 420px;
+    max-height: none;
+    background-position: top center;
+    background-size: cover;
+  }
   .hero-title { font-size: 2.2rem; }
-  .slide-image { display: block; margin-top: 24px; width: 100%; }
-  .hero-img { height: 280px; }
-  .circle-frame { width: 220px; height: 220px; margin: 0 auto; }
-  .slide-content { flex-direction: column; text-align: center; justify-content: center; }
+  .slide-image { display: none; }
+  .slide-content { flex-direction: column; text-align: center; justify-content: center; padding: 40px 20px; }
   .cta-dots-left, .cta-dots-right { display: none; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .footer-bottom .container { flex-direction: column; text-align: center; }
@@ -976,7 +981,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .guia-img { object-position: 85% top; }
 }
 @media (max-width: 480px) {
-  .hero { min-height: 800px; height: 100vh; max-height: none; }
+  .hero {
+    min-height: 380px;
+    height: auto;
+    max-height: none;
+    background-position: top center;
+    background-size: cover;
+  }
   .slide-content { padding: 30px 20px; }
   .hero-title { font-size: 1.9rem; }
   .btn-lg { padding: 14px 32px; }
